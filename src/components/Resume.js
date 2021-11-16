@@ -6,7 +6,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 const Resume = () => {
 	const [numPages, setNumPages] = useState(null);
 	const [pageNumber] = useState(1);
-	const pdf_data_uri = 'images/madarang_resume.pdf';
+	const pdf_data_uri = 'madarang_resume.pdf';
 
 	function onDocumentLoadSuccess({ numPages }) {
 		setNumPages(numPages);
