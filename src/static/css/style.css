@@ -414,6 +414,10 @@ button:hover {
 	width: 100vw;
 }
 
+.resume-pdf img {
+	width: 80vw;
+}
+
 .spacer {
 	background-color: black;
 	height: 1em;
@@ -508,6 +512,11 @@ button:hover {
 
 	.resume-pdf-600 {
 		display: block;
+	}
+
+	.resume-pdf-600 img {
+		display: block;
+		width: 100vw;
 	}
 
 	.bgtpf-vid {
