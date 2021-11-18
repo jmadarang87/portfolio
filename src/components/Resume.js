@@ -10,12 +10,12 @@ const Resume = () => {
 			<div className='spacer' />
 			<div className='resume-pdf'>
 				<center className='bg-color-blk'>
-					<img src="images/madarang_resume.png"></img>
+					<img src="images/madarang_resume.png" alt="junior developer resume"></img>
 				</center>
 			</div>
 			<div className='resume-pdf-600'>
 				<center>
-					<img src="images/madarang_resume.png"></img>
+					<img src="images/madarang_resume.png" alt="junior developer resume"></img>
 				</center>
 			</div>
 			<div className='spacer' />
