@@ -1,21 +1,45 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
-import submit from '../static/js/script.js';
+// import submit from '../static/js/script.js';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { DataStore } from '@aws-amplify/datastore';
+import { Contact } from '../models';
 
-function Contact() {
+
+function Contacts() {
 	React.useEffect(() => {
 		window.scrollTo(0, 0);
-		fetchItems();
+		// fetchItems();
 	}, []);
 
-	const [items, setItems] = useState([]);
+	const submit = async (e) => {
+		e.preventDefault();
 
-	const fetchItems = async () => {
-		const data = await fetch('/contact');
-		const items = await data.json();
-		setItems(items);
-	};
+		let visitorName = document.getElementById('visitorName');
+		let visitorEmail = document.getElementById('visitorEmail');
+		let visitorMessage = document.getElementById('visitorMessage');
+	
+		const contactInfo = {
+			name: visitorName.value,
+			email: visitorEmail.value,
+			message: visitorMessage.value
+		}
+
+		const newContact = await DataStore.save(
+			new Contact(contactInfo)
+		)
+
+		window.alert(`Thanks for your message! I'll get back to you as soon as I can!`)
+
+		visitorName.value = "";
+		visitorEmail.value = "";
+		visitorMessage.value= "";
+		
+		console.log(newContact);
+
+
+
+	}
 
 	return (
 		<section>
@@ -31,13 +55,13 @@ function Contact() {
 					></script>
 				</Helmet>
 			</HelmetProvider>
-			<div className='div'>
+			{/* <div className='div'>
 				{items.map((item, i) => (
 					<div key={i}>
 						<p>{item.name}</p>
 					</div>
 				))}
-			</div>
+			</div> */}
 			<br />
 			<div className='form-container'>
 				<form className='contact-form'>
@@ -119,4 +143,4 @@ function Contact() {
 	);
 }
 
-export default Contact;
+export default Contacts;

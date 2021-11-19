@@ -9,6 +9,8 @@
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
+    "@react-native-async-storage/async-storage": "^1.15.11",
+    "@react-native-community/netinfo": "^7.1.2",
     "@react-pdf-viewer/core": "^2.10.1",
     "@react-pdf-viewer/default-layout": "^2.10.1",
     "@testing-library/jest-dom": "^5.11.4",
@@ -18,6 +20,9 @@
     "@types/node": "^16.11.6",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
+    "amazon-cognito-identity-js": "^5.2.3",
+    "aws-amplify": "^4.3.7",
+    "aws-amplify-react-native": "^6.0.1",
     "babel-plugin-macros": "^3.1.0",
     "deploy": "^1.0.3",
     "gh-pages": "^3.2.3",
@@ -38,7 +43,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://jahnelmadarang.herokuapp.com/",
   "eslintConfig": {
     "extends": [
       "react-app",

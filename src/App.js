@@ -5,7 +5,7 @@ import Home from './components//Home';
 import Nav from './components/Nav';
 import Portfolio from './components/Portfolio';
 import Resume from './components/Resume';
-import Contact from './components/Contact';
+import Contacts from './components/Contact';
 import Footer from './components/Footer';
 import FamilyGallery from './components/FamilyGallery';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -32,7 +32,7 @@ function App() {
 					<Route path='/portfolio' component={Portfolio} title='portfolio' />
 					<Route path='/resume' component={Resume} title='resume' />
 					<Route path='/doing-good' component={Good} title='good stuff' />
-					<Route path='/contact' component={Contact} title='contact-me' />
+					<Route path='/contact' component={Contacts} title='contact-me' />
 				</Switch>
 				<Footer />
 			</div>
