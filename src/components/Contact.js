@@ -25,7 +25,7 @@ function Contacts() {
 			message: visitorMessage.value
 		}
 
-		const newContact = await DataStore.save(
+		DataStore.save(
 			new Contact(contactInfo)
 		)
 
