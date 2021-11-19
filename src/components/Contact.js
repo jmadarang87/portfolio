@@ -34,10 +34,6 @@ function Contacts() {
 		visitorName.value = "";
 		visitorEmail.value = "";
 		visitorMessage.value= "";
-		
-		console.log(newContact);
-
-
 
 	}
 
